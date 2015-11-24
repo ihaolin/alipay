@@ -61,19 +61,19 @@ public abstract class Component {
     }
 
     /**
-     * 把请求参数中的key/value组装成用&连接的请求字符串，按key的字母升序排序
+     * 把请求参数中的key/value组装成用与号连接的请求字符串，按key的字母升序排序
      * @param params 支付参数
-     * @return key/value组装成用&连接的请求字符串，按key的字母升序排序
+     * @return key/value组装成用与号连接的请求字符串，按key的字母升序排序
      */
     public String buildSignString(Map<String, String> params) {
         return buildSignString(params, "");
     }
 
     /**
-     * 把请求参数中的key/value组装成用&连接的请求字符串，按key的字母升序排序
+     * 把请求参数中的key/value组装成用与号连接的请求字符串，按key的字母升序排序
      * @param params 支付参数
      * @param wrapChar 值的包装字符，如APP支付需要加"
-     * @return key/value组装成用&连接的请求字符串，按key的字母升序排序
+     * @return key/value组装成用与号连接的请求字符串，按key的字母升序排序
      */
     public String buildSignString(Map<String, String> params, String wrapChar) {
         List<String> keys = new ArrayList<>(params.keySet());
