@@ -80,7 +80,7 @@
 		mvn clean jetty:run -Dmaven.test.skip -Djetty.port={自定义端口号}
 		```
 	
-	+ WEB支付可访问(请求正常后，应该会跳到支付宝收银台页面，完成支付后，过几秒页面会跳转到``webReturnUrl``，console里也会有服务器通知的日志出现):
+	+ WEB支付可访问(**请求正常后，应该会跳到支付宝收银台页面，完成支付后，过几秒页面会跳转到``webReturnUrl``，console里也会有服务器通知的日志出现**):
 		
 		```bash
 		http://localhost:{port}/pays/web?orderNumber={自定义订单号}
