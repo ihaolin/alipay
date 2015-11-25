@@ -43,6 +43,33 @@ public class AlipayTest {
         System.out.println(form);
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void testWebPayOutTradeNoEmpty(){
+        WebPayDetail fields = new WebPayDetail("", "ss", "0.01");
+        fields.setExterInvokeIp("222.112.105.129");
+        String form = alipay.pay().webPay(fields);
+        assertNotNull(form);
+        System.out.println(form);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testWebPayOrderNameNull(){
+        WebPayDetail fields = new WebPayDetail("DM1234567800", null, "0.01");
+        fields.setExterInvokeIp("222.112.105.129");
+        String form = alipay.pay().webPay(fields);
+        assertNotNull(form);
+        System.out.println(form);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testWebPayTotalFeeEmpty(){
+        WebPayDetail fields = new WebPayDetail("DM1234567800", "ss", "");
+        fields.setExterInvokeIp("222.112.105.129");
+        String form = alipay.pay().webPay(fields);
+        assertNotNull(form);
+        System.out.println(form);
+    }
+
     @Test
     public void testWapPay(){
         WapPayDetail fields = new WapPayDetail("DM12345678999", "ss", "0.01");

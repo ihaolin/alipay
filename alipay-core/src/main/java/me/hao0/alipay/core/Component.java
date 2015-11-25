@@ -1,6 +1,5 @@
 package me.hao0.alipay.core;
 
-import me.hao0.alipay.exception.AliPayException;
 import me.hao0.alipay.model.enums.AlipayField;
 import me.hao0.alipay.model.enums.SignType;
 import me.hao0.common.security.MD5;
@@ -97,18 +96,6 @@ public abstract class Component {
     protected void putIfNotEmpty(Map<String, String> map, AlipayField field, String paramValue) {
         if (!Strings.isNullOrEmpty(paramValue)){
             map.put(field.field(), paramValue);
-        }
-    }
-
-    protected void checkNotEmpty(AlipayField f, String value) {
-        if (Strings.isNullOrEmpty(value)){
-            throw new AliPayException(f.field() + " can't be null or empty.");
-        }
-    }
-
-    protected void checkNotEmpty(AlipayField f, List<?> list) {
-        if (list == null || list.isEmpty()){
-            throw new AliPayException(f.field() + " can't be null or empty.");
         }
     }
 }

@@ -10,6 +10,7 @@ import me.hao0.alipay.model.pay.WebPayDetail;
 import me.hao0.common.security.RSA;
 import java.util.HashMap;
 import java.util.Map;
+import static me.hao0.common.util.Preconditions.*;
 
 /**
  * Pay Component
@@ -115,6 +116,7 @@ public class Pays extends Component {
      * @return APP支付字符串
      */
     public String appPay(AppPayDetail appPayDetail){
+        checkNotNullAndEmpty(alipay.appPriKey, "app private key can't be empty before app pay.");
         Map<String, String> appPayParams = buildAppPayParams(appPayDetail);
         return buildRsaPayString(appPayParams);
     }
@@ -163,9 +165,16 @@ public class Pays extends Component {
 
         // 业务参数
         payParams.put(AlipayField.SERVICE.field(), service.value());
+
+        checkNotNullAndEmpty(payDetail.getOutTradeNo(), "outTradeNo can't be null or empty");
         payParams.put(AlipayField.OUT_TRADE_NO.field(), payDetail.getOutTradeNo());
+
+        checkNotNullAndEmpty(payDetail.getOrderName(), "orderName can't be null or empty");
         payParams.put(AlipayField.SUBJECT.field(), payDetail.getOrderName());
+
+        checkNotNullAndEmpty(payDetail.getTotalFee(), "totalFee can't be null or empty");
         payParams.put(AlipayField.TOTAL_FEE.field(), payDetail.getTotalFee());
+
         putIfNotEmpty(payParams, AlipayField.NOTIFY_URL, payDetail.getNotifyUrl());
         putIfNotEmpty(payParams, AlipayField.RETURN_URL, payDetail.getReturnUrl());
 

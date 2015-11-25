@@ -6,6 +6,7 @@ import me.hao0.common.http.Http;
 import me.hao0.common.security.RSA;
 import java.util.Map;
 import java.util.Objects;
+import static me.hao0.common.util.Preconditions.*;
 
 /**
  * 验证组件
@@ -40,6 +41,7 @@ public class Verifies extends Component {
         String expectSign = notifyParams.get(AlipayField.SIGN.field());
         Map<String, String> validParams = filterSigningParams(notifyParams);
         String signing = buildSignString(validParams);
+        checkNotNullAndEmpty(alipay.appPubKey, "app public key can't be empty before rsa verify.");
         return RSA.verify(signing, expectSign, alipay.appPubKey, alipay.inputCharset);
     }
 

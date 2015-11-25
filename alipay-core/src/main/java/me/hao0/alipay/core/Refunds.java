@@ -13,6 +13,7 @@ import me.hao0.common.xml.XmlReaders;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import static me.hao0.common.util.Preconditions.*;
 
 /**
  * 退款组件
@@ -75,12 +76,12 @@ public class Refunds extends Component {
         refundParams.put(AlipayField.REFUND_DATE.field(), Dates.now("yyyy-MM-dd HH:mm:ss"));
 
         // 退款批次号
-        checkNotEmpty(AlipayField.BATCH_NO, refundDetail.getBatchNo());
+        checkNotNullAndEmpty(refundDetail.getBatchNo(), "batchNo can't be empty");
         refundParams.put(AlipayField.BATCH_NO.field(), refundDetail.getBatchNo());
 
         // 退款明细
         List<RefundDetailData> detailDatas = refundDetail.getDetailDatas();
-        checkNotEmpty(AlipayField.DETAIL_DATA, detailDatas);
+        checkNotNullAndEmpty(detailDatas, "detail datas can't be null or empty");
         refundParams.put(AlipayField.BATCH_NUM.field(), detailDatas.size() + "");
         refundParams.put(AlipayField.DETAIL_DATA.field(), refundDetail.formatDetailDatas());
 
