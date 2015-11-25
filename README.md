@@ -109,6 +109,16 @@
 	+ [WAP支付](http://doc.open.alipay.com/doc2/detail?treeId=60&articleId=103564&docType=1)；
 	+ [APP支付](http://doc.open.alipay.com/doc2/detail?treeId=59&articleId=103563&docType=1)。
 
++ 历史版本:
+
+	+ 1.0.0:
+		
+		+ 基本功能实现。
+	
+	+ 1.0.1:
+		
+		+ 必要参数校验。  
+
 + 你是好人:
 
 	+ 倘若你钱多人傻花不完，小弟乐意效劳😊，掏出你的**微信神器**做回好人吧:

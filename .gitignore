@@ -76,3 +76,5 @@ dev.properties
 app.properties
 
 data
+
+*.versionsBackup
