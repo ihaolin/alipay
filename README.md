@@ -9,7 +9,7 @@
 	<dependency>
         <groupId>me.hao0</groupId>
         <artifactId>alipay-core</artifactId>
-        <version>1.0.1</version>
+        <version>1.0.2</version>
     </dependency>
 	```
 	
@@ -19,12 +19,12 @@
 	<dependency>
         <groupId>me.hao0</groupId>
         <artifactId>alipay-api</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.2</version>
     </dependency>
     <dependency>
         <groupId>me.hao0</groupId>
         <artifactId>common</artifactId>
-        <version>1.0.4</version>
+        <version>1.0.9</version>
     </dependency>
 	
 	```
@@ -117,7 +117,12 @@
 	
 	+ 1.0.1:
 		
-		+ 必要参数校验。  
+		+ 必要参数校验。
+
+	+ 1.0.2:
+
+	    + 升级最新[common](https://github.com/ihaolin/common)组件；
+	    + 参数校验简化。
 
 + 你是好人:
 

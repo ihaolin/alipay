@@ -76,12 +76,12 @@ public class Refunds extends Component {
         refundParams.put(AlipayField.REFUND_DATE.field(), Dates.now("yyyy-MM-dd HH:mm:ss"));
 
         // 退款批次号
-        checkNotNullAndEmpty(refundDetail.getBatchNo(), "batchNo can't be empty");
+        checkNotNullAndEmpty(refundDetail.getBatchNo(), "batchNo");
         refundParams.put(AlipayField.BATCH_NO.field(), refundDetail.getBatchNo());
 
         // 退款明细
         List<RefundDetailData> detailDatas = refundDetail.getDetailDatas();
-        checkNotNullAndEmpty(detailDatas, "detail datas can't be null or empty");
+        checkNotNullAndEmpty(detailDatas, "detail datas");
         refundParams.put(AlipayField.BATCH_NUM.field(), detailDatas.size() + "");
         refundParams.put(AlipayField.DETAIL_DATA.field(), refundDetail.formatDetailDatas());
 
