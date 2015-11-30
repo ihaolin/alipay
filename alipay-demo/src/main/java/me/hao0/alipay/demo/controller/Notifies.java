@@ -3,6 +3,7 @@ package me.hao0.alipay.demo.controller;
 import me.hao0.alipay.demo.service.AlipayService;
 import me.hao0.alipay.model.AlipayFields;
 import me.hao0.alipay.model.enums.AlipayField;
+import me.hao0.alipay.model.enums.TradeStatus;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,7 +45,12 @@ public class Notifies {
             return "FAIL";
         }
 
-        // TODO business logic
+        String tradeStatus = notifyParams.get(AlipayField.TRADE_STATUS.field());
+        if (TradeStatus.TRADE_FINISHED.equals(tradeStatus)
+                || TradeStatus.TRADE_SUCCESS.equals(tradeStatus)){
+            // 交易成功
+            // TODO business logic
+        }
 
         logger.info("backend notify success");
         return "SUCCESS";
@@ -61,6 +67,13 @@ public class Notifies {
         // TODO 这里还是建议直接从request中获取map参数，兼容支付宝修改或增减参数
         for (AlipayField f : AlipayFields.WEB_PAY_RETURN){
             receives.put(f.field(), request.getParameter(f.field()));
+        }
+
+        String tradeStatus = receives.get(AlipayField.TRADE_STATUS.field());
+        if (TradeStatus.TRADE_FINISHED.equals(tradeStatus)
+                || TradeStatus.TRADE_SUCCESS.equals(tradeStatus)){
+            // 交易成功
+            // TODO business logic
         }
 
         logger.info("web frontend notify params: {}", receives);
@@ -80,6 +93,13 @@ public class Notifies {
         // TODO 这里还是建议直接从request中获取map参数，兼容支付宝修改或增减参数
         for (AlipayField f : AlipayFields.WAP_PAY_RETURN){
             receives.put(f.field(), request.getParameter(f.field()));
+        }
+
+        String tradeStatus = receives.get(AlipayField.TRADE_STATUS.field());
+        if (TradeStatus.TRADE_FINISHED.equals(tradeStatus)
+                || TradeStatus.TRADE_SUCCESS.equals(tradeStatus)){
+            // 交易成功
+            // TODO business logic
         }
 
         logger.info("wap frontend notify params: {}", receives);
