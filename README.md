@@ -9,7 +9,7 @@
 	<dependency>
         <groupId>me.hao0</groupId>
         <artifactId>alipay-core</artifactId>
-        <version>1.0.2</version>
+        <version>1.0.3</version>
     </dependency>
 	```
 	
