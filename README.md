@@ -19,7 +19,7 @@
 	<dependency>
         <groupId>me.hao0</groupId>
         <artifactId>alipay-api</artifactId>
-        <version>1.0.2</version>
+        <version>1.0.4</version>
     </dependency>
     <dependency>
         <groupId>me.hao0</groupId>
