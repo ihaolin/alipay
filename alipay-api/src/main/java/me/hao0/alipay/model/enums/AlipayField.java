@@ -251,7 +251,9 @@ public enum AlipayField {
      *  交易号^退款金额^处理结果
      * 3. 若退款申请提交成功，处理结果会返回“SUCCESS”。若提交失败，退款的处理结果中会有报错码
      */
-    RESULT_DETAILS("result_details", "退款结果明细");
+    RESULT_DETAILS("result_details", "退款结果明细"),
+
+    GOODS_TYPE("goods_type", "商品类型");
 
     private String field;
 

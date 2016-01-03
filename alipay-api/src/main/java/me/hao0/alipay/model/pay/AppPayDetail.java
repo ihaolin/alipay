@@ -1,6 +1,7 @@
 package me.hao0.alipay.model.pay;
 
 import me.hao0.alipay.annotation.Optional;
+import me.hao0.alipay.model.enums.GoodsType;
 
 /**
  * 支付宝APP支付明细
@@ -47,6 +48,18 @@ public class AppPayDetail extends PayDetail {
     @Optional
     private String outContext;
 
+    /**
+     * 商品详情
+     */
+    private String body;
+
+    /**
+     * 商品类型
+     * @see me.hao0.alipay.model.enums.GoodsType
+     */
+    @Optional
+    private GoodsType goodsType;
+
     public AppPayDetail(String outTradeNo, String orderName, String totalFee) {
         super(outTradeNo, orderName, totalFee);
     }
@@ -91,14 +104,32 @@ public class AppPayDetail extends PayDetail {
         this.outContext = outContext;
     }
 
+    public String getBody() {
+        return body;
+    }
+
+    public void setBody(String body) {
+        this.body = body;
+    }
+
+    public GoodsType getGoodsType() {
+        return goodsType;
+    }
+
+    public void setGoodsType(GoodsType goodsType) {
+        this.goodsType = goodsType;
+    }
+
     @Override
     public String toString() {
-        return "AppPayFields{" +
+        return "AppPayDetail{" +
                 "appId='" + appId + '\'' +
                 ", appenv='" + appenv + '\'' +
                 ", rnCheck='" + rnCheck + '\'' +
                 ", externToken='" + externToken + '\'' +
                 ", outContext='" + outContext + '\'' +
+                ", body='" + body + '\'' +
+                ", goodsType=" + goodsType +
                 "} " + super.toString();
     }
 }

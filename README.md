@@ -9,7 +9,7 @@
 	<dependency>
         <groupId>me.hao0</groupId>
         <artifactId>alipay-core</artifactId>
-        <version>1.0.3</version>
+        <version>1.0.4</version>
     </dependency>
 	```
 	
@@ -127,6 +127,10 @@
 	+ 1.0.3:
 
 	    + 在alipay-demo中判断交易状态，web,wap只会在交易成功后通知，app还会在交易创建后作通知.
+
+	+ 1.0.4:
+
+	    + APP支付增加**body**和**goodsType**参数。
 
 + 你是好人:
 

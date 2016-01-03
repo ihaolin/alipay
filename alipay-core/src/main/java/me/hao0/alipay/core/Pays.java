@@ -129,11 +129,15 @@ public class Pays extends Component {
         appPayParams.remove(AlipayField.RETURN_URL.field());
 
         // APP特有参数
+        checkNotNullAndEmpty(appPayDetail.getBody(), "body");
+        appPayParams.put(AlipayField.BODY.field(), appPayDetail.getBody());
+
         putIfNotEmpty(appPayParams, AlipayField.APP_ID, appPayDetail.getAppId());
         putIfNotEmpty(appPayParams, AlipayField.APPENV, appPayDetail.getAppenv());
         putIfNotEmpty(appPayParams, AlipayField.EXTERN_TOKEN, appPayDetail.getExternToken());
         putIfNotEmpty(appPayParams, AlipayField.OUT_CONTEXT, appPayDetail.getOutContext());
         putIfNotEmpty(appPayParams, AlipayField.RN_CHECK, appPayDetail.getRnCheck());
+        putIfNotEmpty(appPayParams, AlipayField.GOODS_TYPE, appPayDetail.getGoodsType().value());
 
         return appPayParams;
     }

@@ -5,12 +5,12 @@
     <parent>
         <artifactId>alipay</artifactId>
         <groupId>me.hao0</groupId>
-        <version>1.0.3</version>
+        <version>1.0.4</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <packaging>jar</packaging>
 
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <name>alipay-core</name>
     <artifactId>alipay-core</artifactId>
     <description>A Lightweight Alipay Component</description>
@@ -20,7 +20,7 @@
         <dependency>
             <groupId>me.hao0</groupId>
             <artifactId>alipay-api</artifactId>
-            <version>1.0.3</version>
+            <version>1.0.4</version>
         </dependency>
 
         <dependency>
