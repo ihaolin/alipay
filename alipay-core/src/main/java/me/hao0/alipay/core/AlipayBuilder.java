@@ -17,6 +17,15 @@ public final class AlipayBuilder {
     }
 
     /**
+     * 仅需要APP支付时，可以不配置secret
+     * @param merchantId 商户编号
+     * @return this builder
+     */
+    public static AlipayBuilder newBuilder(String merchantId) {
+        return newBuilder(merchantId, "");
+    }
+
+    /**
      * Set email account
      * @param email email account
      * @return this

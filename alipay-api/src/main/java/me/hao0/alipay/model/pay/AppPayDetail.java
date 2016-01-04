@@ -60,8 +60,9 @@ public class AppPayDetail extends PayDetail {
     @Optional
     private GoodsType goodsType;
 
-    public AppPayDetail(String outTradeNo, String orderName, String totalFee) {
+    public AppPayDetail(String outTradeNo, String orderName, String totalFee, String body) {
         super(outTradeNo, orderName, totalFee);
+        this.body = body;
     }
 
     public String getAppId() {
