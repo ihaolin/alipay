@@ -80,7 +80,7 @@ public class AlipayTest {
 
     @Test
     public void testAppPay(){
-        AppPayDetail fields = new AppPayDetail("DM1234567779", "ss", "0.01");
+        AppPayDetail fields = new AppPayDetail("DM1234567779", "ss", "0.01", "测试商品");
         String payString = alipay.pay().appPay(fields);
         assertNotNull(payString);
         System.out.println(payString);
