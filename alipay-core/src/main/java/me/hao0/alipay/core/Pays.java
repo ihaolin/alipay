@@ -1,5 +1,6 @@
 package me.hao0.alipay.core;
 
+import me.hao0.alipay.exception.AliPayException;
 import me.hao0.alipay.model.enums.AlipayField;
 import me.hao0.alipay.model.enums.Service;
 import me.hao0.alipay.model.enums.SignType;
@@ -8,6 +9,9 @@ import me.hao0.alipay.model.pay.PayDetail;
 import me.hao0.alipay.model.pay.WapPayDetail;
 import me.hao0.alipay.model.pay.WebPayDetail;
 import me.hao0.common.security.RSA;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.Map;
 import static me.hao0.common.util.Preconditions.*;
@@ -150,6 +154,11 @@ public class Pays extends Component {
     private String buildRsaPayString(Map<String, String> payParams) {
         String payString = buildSignString(payParams, "\"");
         String sign = RSA.sign(payString, alipay.appPriKey, alipay.inputCharset);
+        try {
+            sign = URLEncoder.encode(sign, "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            throw new AliPayException("sign encode failed", e);
+        }
         payString += ("&sign_type=\"" + SignType.RSA.value() + "\"&sign=\""+ sign +"\"");
         return payString;
     }
