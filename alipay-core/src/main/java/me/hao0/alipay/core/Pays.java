@@ -141,7 +141,9 @@ public class Pays extends Component {
         putIfNotEmpty(appPayParams, AlipayField.EXTERN_TOKEN, appPayDetail.getExternToken());
         putIfNotEmpty(appPayParams, AlipayField.OUT_CONTEXT, appPayDetail.getOutContext());
         putIfNotEmpty(appPayParams, AlipayField.RN_CHECK, appPayDetail.getRnCheck());
-        putIfNotEmpty(appPayParams, AlipayField.GOODS_TYPE, appPayDetail.getGoodsType().value());
+        if (appPayDetail.getGoodsType() != null){
+            appPayParams.put(AlipayField.GOODS_TYPE.field(), appPayDetail.getGoodsType().value());
+        }
 
         return appPayParams;
     }

@@ -9,7 +9,7 @@
 	<dependency>
         <groupId>me.hao0</groupId>
         <artifactId>alipay-core</artifactId>
-        <version>1.0.7</version>
+        <version>1.0.8</version>
     </dependency>
 	```
 	
@@ -19,7 +19,7 @@
 	<dependency>
         <groupId>me.hao0</groupId>
         <artifactId>alipay-api</artifactId>
-        <version>1.0.7</version>
+        <version>1.0.8</version>
     </dependency>
     <dependency>
         <groupId>me.hao0</groupId>
@@ -139,11 +139,15 @@
 
 	+ 1.0.6:
 
-	    + 单元测试编译错误
+	    + 单元测试编译错误.
 
 	+ 1.0.7:
 
-	    + APP支付sign进行encode
+	    + APP支付sign进行encode.
+    
+    + 1.0.8:
+    
+        + APP支付**goodsType**参数可选
 
 + 你是好人:
 
