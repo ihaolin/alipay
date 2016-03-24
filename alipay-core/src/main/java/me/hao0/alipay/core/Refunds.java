@@ -82,7 +82,7 @@ public class Refunds extends Component {
         // 退款明细
         List<RefundDetailData> detailDatas = refundDetail.getDetailDatas();
         checkNotNullAndEmpty(detailDatas, "detail datas");
-        refundParams.put(AlipayField.BATCH_NUM.field(), detailDatas.size() + "");
+        refundParams.put(AlipayField.BATCH_NUM.field(), Integer.toString(detailDatas.size()));
         refundParams.put(AlipayField.DETAIL_DATA.field(), refundDetail.formatDetailDatas());
 
         // md5签名参数
