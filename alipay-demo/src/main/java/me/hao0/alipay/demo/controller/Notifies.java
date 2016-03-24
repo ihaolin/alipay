@@ -46,8 +46,8 @@ public class Notifies {
         }
 
         String tradeStatus = notifyParams.get(AlipayField.TRADE_STATUS.field());
-        if (TradeStatus.TRADE_FINISHED.equals(tradeStatus)
-                || TradeStatus.TRADE_SUCCESS.equals(tradeStatus)){
+        if (TradeStatus.TRADE_FINISHED.value().equals(tradeStatus)
+                || TradeStatus.TRADE_SUCCESS.value().equals(tradeStatus)){
             // 交易成功
             // TODO business logic
         }
@@ -70,8 +70,8 @@ public class Notifies {
         }
 
         String tradeStatus = receives.get(AlipayField.TRADE_STATUS.field());
-        if (TradeStatus.TRADE_FINISHED.equals(tradeStatus)
-                || TradeStatus.TRADE_SUCCESS.equals(tradeStatus)){
+        if (TradeStatus.TRADE_FINISHED.value().equals(tradeStatus)
+                || TradeStatus.TRADE_SUCCESS.value().equals(tradeStatus)){
             // 交易成功
             // TODO business logic
         }
@@ -96,8 +96,8 @@ public class Notifies {
         }
 
         String tradeStatus = receives.get(AlipayField.TRADE_STATUS.field());
-        if (TradeStatus.TRADE_FINISHED.equals(tradeStatus)
-                || TradeStatus.TRADE_SUCCESS.equals(tradeStatus)){
+        if (TradeStatus.TRADE_FINISHED.value().equals(tradeStatus)
+                || TradeStatus.TRADE_SUCCESS.value().equals(tradeStatus)){
             // 交易成功
             // TODO business logic
         }
