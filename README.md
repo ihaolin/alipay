@@ -9,7 +9,7 @@
 	<dependency>
         <groupId>me.hao0</groupId>
         <artifactId>alipay-core</artifactId>
-        <version>1.0.8</version>
+        <version>1.0.9</version>
     </dependency>
 	```
 	
@@ -19,7 +19,7 @@
 	<dependency>
         <groupId>me.hao0</groupId>
         <artifactId>alipay-api</artifactId>
-        <version>1.0.8</version>
+        <version>1.0.9</version>
     </dependency>
     <dependency>
         <groupId>me.hao0</groupId>
@@ -148,6 +148,13 @@
     + 1.0.8:
     
         + APP支付**goodsType**参数可选
+    
+    + 1.0.9:
+        
+        + 提升代码质量
+        
+            + DevFactory/release/silly-quality-checks-should-be-removed-fix-1
+            + DevFactory/release/general-cod-quality-fix-1
 
 + 你是好人:
 
