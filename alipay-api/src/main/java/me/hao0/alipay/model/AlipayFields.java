@@ -12,6 +12,10 @@ import java.util.List;
  */
 public class AlipayFields {
 
+    private AlipayFields() {
+        
+    }
+    
     /**
      * PC支付服务器通知参数
      */
