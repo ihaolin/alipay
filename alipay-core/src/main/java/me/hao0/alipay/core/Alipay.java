@@ -102,7 +102,6 @@ public final class Alipay {
         payConfig.put(AlipayField.PARTNER.field(), merchantId);
         payConfig.put(AlipayField.SELLER_ID.field(), merchantId);
         payConfig.put(AlipayField.PAYMENT_TYPE.field(), paymentType);
-        payConfig.put(AlipayField.PAY_METHOD.field(), payMethod);
         payConfig.put(AlipayField.IT_B_PAY.field(), expired);
         payConfig.put(AlipayField.INPUT_CHARSET.field(), inputCharset);
 

@@ -129,7 +129,8 @@ public class Pays extends Component {
 
         // 公共参数
         Map<String, String> appPayParams = buildPayParams(appPayDetail, Service.APP_PAY);
-        // APP支付无return_url
+
+        // APP支付无return_url, paymethod
         appPayParams.remove(AlipayField.RETURN_URL.field());
 
         // APP特有参数

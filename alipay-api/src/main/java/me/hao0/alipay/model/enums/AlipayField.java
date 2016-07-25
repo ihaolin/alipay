@@ -10,7 +10,7 @@ public enum AlipayField {
 
     PARTNER("partner", "商户ID"),
 
-    PAY_METHOD("pay_method", "支付类型"),
+    PAY_METHOD("paymethod", "支付类型"),
 
     IT_B_PAY("it_b_pay", "超时设置"),
 
