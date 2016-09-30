@@ -9,7 +9,7 @@
 	<dependency>
         <groupId>me.hao0</groupId>
         <artifactId>alipay-core</artifactId>
-        <version>1.0.10</version>
+        <version>1.1.0</version>
     </dependency>
 	```
 	
@@ -158,7 +158,11 @@
     
     + 1.0.10:
         
-        + 移除**paymethod**参数, 均使用默认支付方式directPay.    
+        + 移除**paymethod**参数, 均使用默认支付方式directPay.  
+          
+    + 1.1.0:
+        
+        + PC支付增加**extra_common_param**参数.
 
 + 你是好人:
 

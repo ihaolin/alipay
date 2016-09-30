@@ -22,6 +22,12 @@ public class WebPayDetail extends PayDetail {
      */
     protected String errorNotifyUrl;
 
+    /**
+     * 公用回传参数
+     * {@link me.hao0.alipay.model.enums.AlipayField#EXTRA_COMMON_PARAM}
+     */
+    protected String extraCommonParam;
+
     public WebPayDetail(String outTradeNo, String orderName, String totalFee) {
         super(outTradeNo, orderName, totalFee);
     }
@@ -40,6 +46,14 @@ public class WebPayDetail extends PayDetail {
 
     public void setExterInvokeIp(String exterInvokeIp) {
         this.exterInvokeIp = exterInvokeIp;
+    }
+
+    public String getExtraCommonParam() {
+        return extraCommonParam;
+    }
+
+    public void setExtraCommonParam(String extraCommonParam) {
+        this.extraCommonParam = extraCommonParam;
     }
 
     @Override
