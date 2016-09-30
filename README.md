@@ -12,22 +12,6 @@
         <version>1.1.0</version>
     </dependency>
 	```
-	
-+ 依赖包，注意引入项目时是否需要**exclude**:
-
-	```xml
-	<dependency>
-        <groupId>me.hao0</groupId>
-        <artifactId>alipay-api</artifactId>
-        <version>1.0.10</version>
-    </dependency>
-    <dependency>
-        <groupId>me.hao0</groupId>
-        <artifactId>common</artifactId>
-        <version>1.0.9</version>
-    </dependency>
-	
-	```
 
 + 业务系统与支付宝系统交互图:
 	
