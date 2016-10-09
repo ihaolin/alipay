@@ -9,7 +9,7 @@
 	<dependency>
         <groupId>me.hao0</groupId>
         <artifactId>alipay-core</artifactId>
-        <version>1.1.0</version>
+        <version>1.2.0</version>
     </dependency>
 	```
 
@@ -147,6 +147,10 @@
     + 1.1.0:
         
         + PC支付增加**extra_common_param**参数.
+    
+    + 1.2.0:
+            
+        + PC支付增加**anti_phishing_key**参数, 防钓鱼.
 
 + 你是好人:
 

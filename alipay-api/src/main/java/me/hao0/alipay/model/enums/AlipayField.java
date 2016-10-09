@@ -33,6 +33,11 @@ public enum AlipayField {
     EXTER_INVOKE_IP("exter_invoke_ip", "客户端IP"),
 
     /**
+     * 通过时间戳查询接口获取的加密支付宝系统时间戳，如果已申请开通防钓鱼时间戳验证，则此字段必填。
+     */
+    ANTI_PHISHING_KEY("anti_phishing_key", "防钓鱼时间戳"),
+
+    /**
      * 收银台页面上，商品展示的超链接
      */
     SHOW_URL("show_url", "商品展示链接"),

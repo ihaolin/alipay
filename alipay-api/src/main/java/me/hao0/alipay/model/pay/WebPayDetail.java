@@ -17,6 +17,12 @@ public class WebPayDetail extends PayDetail {
     protected String exterInvokeIp;
 
     /**
+     * 防钓鱼时间戳
+     * {@link me.hao0.alipay.model.enums.AlipayField#ANTI_PHISHING_KEY}
+     */
+    protected String antiPhishingKey;
+
+    /**
      * 支付宝错误通知跳转
      * {@link me.hao0.alipay.model.enums.AlipayField#ERROR_NOTIFY_URL}
      */
@@ -56,11 +62,21 @@ public class WebPayDetail extends PayDetail {
         this.extraCommonParam = extraCommonParam;
     }
 
+    public String getAntiPhishingKey() {
+        return antiPhishingKey;
+    }
+
+    public void setAntiPhishingKey(String antiPhishingKey) {
+        this.antiPhishingKey = antiPhishingKey;
+    }
+
     @Override
     public String toString() {
-        return "WebPayFields{" +
+        return "WebPayDetail{" +
                 "exterInvokeIp='" + exterInvokeIp + '\'' +
+                ", antiPhishingKey='" + antiPhishingKey + '\'' +
                 ", errorNotifyUrl='" + errorNotifyUrl + '\'' +
+                ", extraCommonParam='" + extraCommonParam + '\'' +
                 "} " + super.toString();
     }
 }

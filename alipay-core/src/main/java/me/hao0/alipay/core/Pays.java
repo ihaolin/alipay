@@ -50,6 +50,7 @@ public class Pays extends Component {
 
         // PC特有参数
         putIfNotEmpty(webPayParams, AlipayField.EXTER_INVOKE_IP, webPayDetail.getExterInvokeIp());
+        putIfNotEmpty(webPayParams, AlipayField.ANTI_PHISHING_KEY, webPayDetail.getAntiPhishingKey());
         putIfNotEmpty(webPayParams, AlipayField.ERROR_NOTIFY_URL, webPayDetail.getErrorNotifyUrl());
         putIfNotEmpty(webPayParams, AlipayField.EXTRA_COMMON_PARAM, webPayDetail.getExtraCommonParam());
 
