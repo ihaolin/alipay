@@ -118,6 +118,16 @@ public final class AlipayBuilder {
         return this;
     }
 
+    /**
+     * 设置支付超时时间
+     * @param payExpired 超时时间
+     * @return this
+     */
+    public AlipayBuilder payExpired(String payExpired){
+        alipay.expired = payExpired;
+        return this;
+    }
+
     public Alipay build() {
         return alipay.start();
     }

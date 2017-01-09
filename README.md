@@ -151,6 +151,10 @@
     + 1.2.0:
             
         + PC支付增加**anti_phishing_key**参数, 防钓鱼.
+    
+    + 1.3.0:
+        
+        + 提供支付超时配置选项**it_b_pay**(`AlipayBuilder.payExpired()`).
 
 + 你是好人:
 
