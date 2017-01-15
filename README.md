@@ -1,4 +1,4 @@
-# Alipay
+# Alipay[![Build Status](https://travis-ci.org/ihaolin/alipay.svg?branch=master)](https://travis-ci.org/ihaolin/alipay)
 
 轻量的支付宝组件(A Lightweight Alipay Component)
 ---
