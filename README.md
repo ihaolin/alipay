@@ -156,13 +156,14 @@
         
         + 提供支付超时配置选项**it_b_pay**(`AlipayBuilder.payExpired()`).
 
-+ 你是好人:
+## 有事请烧钱
 
-	+ 倘若你钱多人傻花不完，小弟乐意效劳😊，掏出你的**微信神器**做回好人吧:
++ 支付宝:
 		
-		<img src="wechat.png" width="200">
+	<img src="alipay.png" width="200">
 	
-	+ 倘若你还不够尽兴，继续掏出你的**支付宝神器**，疯狂扫吧:
++ 微信:
 
-		<img src="alipay.png" width="200">
+	<img src="wechat.png" width="200">
+	
         
